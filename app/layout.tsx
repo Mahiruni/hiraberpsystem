@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Bodoni_Moda, Manrope } from "next/font/google";
 import "./globals.css";
+import "./brand-a11y.css";
 
 const display = Bodoni_Moda({
   subsets: ["latin"],
