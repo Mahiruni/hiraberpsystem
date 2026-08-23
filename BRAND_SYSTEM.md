@@ -1,62 +1,57 @@
-# Hisab ERP — Ledger Nocturne
+# AetherERP — Brand System
 
-## Brand essence
-**Local truth, financial control, quiet confidence.**
+## Brand board
+1. **Essence:** Quiet power. Industrial elegance. Absolute clarity.
+2. **Promise:** One operating system for the entire company.
+3. **Voice:** Calm, precise, operator-grade; no ornamental hype.
+4. **Void:** `#07090C` — primary page canvas.
+5. **Ink:** `#0C1117` — sectional depth and large surfaces.
+6. **Raised:** `#121821` — glass cards and product chrome.
+7. **Paper / Mute:** `#E8EEF4` / `#8B9BB0` — primary and secondary text.
+8. **Accent:** `#3EE0C4` — signature teal used as jewelry, never paint.
+9. **Gold:** `#D4B483` — rare enterprise and forecast highlight.
+10. **Display:** Cormorant Garamond 400–600; editorial, high-contrast, large optical scale.
+11. **UI/body:** Sora 300–700; geometric, compact and readable with tabular numbers enabled where needed.
+12. **Motion / atmosphere:** 180/420/760ms, expo-style ease, 1px lift, sparse teal control-room dust, 66 motes desktop / 20 mobile / zero reduced-motion.
 
-Personality: **precise · assured · cultivated**
-
-Reference altitude: Aesop material restraint, Stripe systems clarity, Linear motion discipline, Ethiopian illuminated-manuscript gold/ink contrast. These are references for quality and restraint, not visual copies.
-
-Never: generic indigo SaaS, neon crypto casino, glass-everything dashboards, rainbow mesh gradients, oversized cartoon shadows, or default system-font marketing.
-
-## Color collection
-
-| Token | Name | Hex | Role |
-|---|---|---:|---|
-| Ink / Void | Carbon Ink | `#0A0D0C` | Main dark canvas |
-| Paper / Surface | Ledger Paper | `#111613` | Primary panels |
-| Raised | Archive Green | `#171E1A` | Elevated surfaces |
-| Hairline | Graphite Rule | `#2B3530` | Dividers and structure |
-| Primary text | Bone | `#F0EDE5` | Headlines and high-emphasis text |
-| Secondary text | Sage Ash | `#9DA79F` | Body and muted UI |
-| Accent A | Abyssinian Brass | `#D7A94B` | Signature jewelry accent |
-| Accent B | Mineral Light | `#CBD2CC` | Supporting cool light |
-| Glow | Burnished Gold | `#A9792B` | Atmospheric radiance |
-| Success | Quiet Laurel | `#719B82` | Positive state |
-
-Utility states: Warning `#BD8D51`, Danger `#AD6B65`, Overlay `rgba(4,6,5,.76)`.
+## Palette
+- Void `#07090C`
+- Ink `#0C1117`
+- Raised `#121821`
+- Raised II `#171F29`
+- Hairline `rgba(214,228,240,0.10)`
+- Paper `#E8EEF4`
+- Mute `#8B9BB0`
+- Accent `#3EE0C4`
+- Gold `#D4B483`
+- Glow `rgba(62,224,196,0.18)`
+- Danger `#E26D6D`
+- Success `#3DDC97`
 
 ## Typography
+Headlines use Cormorant Garamond with line-height around 0.9–1.0 and negative tracking. UI, copy, tables, labels and controls use Sora. Financial values use tabular numerals. Labels are uppercase at 10–12px with generous tracking.
 
-- Display: **Bodoni Moda**, 400–600, normal + italic. Optical, editorial, tightly tracked at large sizes.
-- Body/UI: **Manrope**, 400–800. Humanist-geometric clarity for dense financial UI.
-- Metrics and pricing use tabular numerals.
-- Headline leading: 0.88–0.96. Body leading: 1.62–1.72. Labels are uppercase with open tracking.
-
-## Motion language
-
+## Motion
 - Fast: 180ms
 - Medium: 420ms
 - Slow: 760ms
 - Ease: `cubic-bezier(.16,1,.3,1)`
-- Stagger: 70ms
-- Lift: 1px only
-- Glow: restrained brass pulse
+- Reveal: opacity + 8–16px y + optical blur
+- Buttons: magnetic offset, sheen, restrained press
+- Cards: 1px lift and border energy, no large floating shadow behavior
+- Reduced motion: no particles, no float, immediate dashboard state
 
-Motion metaphor: **expensive machinery** — controlled reveals, tiny physical response, no spectacle.
-
-Particle metaphor: **ledger dust** — sparse brass motes with near-zero gravity, 68 desktop / 24 mobile in the hero, reduced in the final CTA, disabled for reduced motion.
+## Product-film metaphor
+The hero is a dark control room: a physical graphite laptop on a stone-like desk with the live company model glowing from the screen. Atmospheric particles are quiet teal dust behind the machine and never cross the copy layer.
 
 ## Do
+- Let product data and typography create authority.
+- Use teal as a precision instrument, not a fill color.
+- Keep surfaces quiet and borders structural.
+- Make financial UI legible at laptop scale.
 
-1. Use brass like jewelry, not paint.
-2. Let typography and negative space carry prestige.
-3. Use hairlines, tabular numbers, and restrained motion for financial credibility.
-4. Keep surfaces materially tinted and quietly layered.
-
-## Don't
-
-1. Do not reintroduce cyan/indigo/purple as a primary system.
-2. Do not use default Inter/Roboto/system typography for headlines.
-3. Do not add giant shadows, rainbow gradients, or particle spectacle.
-4. Do not change product truth or fabricate customer proof.
+## Do not
+- Use indigo or purple gradient meshes.
+- Use generic startup illustrations or fake 3D blobs.
+- Over-animate the interface.
+- Fabricate unnamed customer proof; composite examples must be labeled.
