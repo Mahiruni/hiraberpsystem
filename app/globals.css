@@ -74,11 +74,11 @@ main { min-height: 100vh; overflow: clip; }
 .nav-wrap.dense .nav-shell { height: 58px; border-radius: 14px; background: rgba(9,13,18,.86); border-color: rgba(214,228,240,.14); }
 .wordmark { display: inline-flex; align-items: center; gap: 10px; min-width: 170px; font-size: 14px; font-weight: 700; letter-spacing: -.035em; }
 .wordmark > span:last-child span { color: var(--accent); font-weight: 500; margin-left: 2px; }
-.aether-mark { width: 36px; height: 36px; border: 1px solid var(--hairline-strong); border-radius: 9px; display: grid; place-items: center; background: linear-gradient(145deg, rgba(62,224,196,.10), rgba(255,255,255,.025)); box-shadow: inset 0 1px rgba(255,255,255,.04); }
-.aether-mark.compact { width: 24px; height: 24px; border-radius: 6px; }
-.aether-mark svg { width: 76%; height: 76%; overflow: visible; }
-.aether-mark path { fill: none; stroke: var(--paper); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.aether-mark .mark-accent { stroke: var(--accent); stroke-width: 1.8; }
+.hisab-mark { width: 36px; height: 36px; border: 1px solid var(--hairline-strong); border-radius: 9px; display: grid; place-items: center; background: linear-gradient(145deg, rgba(62,224,196,.10), rgba(255,255,255,.025)); box-shadow: inset 0 1px rgba(255,255,255,.04); }
+.hisab-mark.compact { width: 24px; height: 24px; border-radius: 6px; }
+.hisab-mark svg { width: 76%; height: 76%; overflow: visible; }
+.hisab-mark path { fill: none; stroke: var(--paper); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.hisab-mark .mark-accent { stroke: var(--accent); stroke-width: 1.8; }
 .nav-main { display: flex; align-items: center; justify-content: center; gap: 2px; margin: 0 auto; height: 100%; }
 .nav-main > a, .nav-products > button { border: 0; background: transparent; color: var(--mute); font-size: 11px; font-weight: 600; padding: 10px 12px; border-radius: 8px; cursor: pointer; transition: color var(--fast), background var(--fast); }
 .nav-products > button { display: flex; gap: 5px; align-items: center; }
@@ -181,7 +181,7 @@ main { min-height: 100vh; overflow: clip; }
 .dash-chart svg { width: 100%; height: 95px; overflow: visible; margin-top: 1px; }
 .chart-gridline { stroke: rgba(214,228,240,.045); stroke-width: 1; }
 .forecast { fill: none; stroke: rgba(212,180,131,.55); stroke-width: 1.3; stroke-dasharray: 4 4; }
-.area { fill: url(#aetherArea); }
+.area { fill: url(#hisabArea); }
 .actual { fill: none; stroke: #3EE0C4; stroke-width: 1.8; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 0; animation: drawLine 1.8s var(--ease) both .45s; }
 .chart-dot { fill: #A4F4E6; stroke: #0D141B; stroke-width: 2; filter: drop-shadow(0 0 4px rgba(62,224,196,.7)); }
 .tooltip rect { fill: #18222C; stroke: rgba(214,228,240,.12); }
@@ -292,7 +292,7 @@ main { min-height: 100vh; overflow: clip; }
 .model-visual > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
 .model-visual > svg circle, .model-visual > svg path { fill: none; stroke: rgba(214,228,240,.065); stroke-width: 1; }
 .model-core { position: absolute; z-index: 4; width: 158px; height: 158px; left: calc(50% - 79px); top: calc(50% - 79px); border-radius: 50%; border: 1px solid rgba(62,224,196,.22); background: radial-gradient(circle at 50% 30%, rgba(62,224,196,.10), #10171E 68%); display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: 0 0 70px rgba(62,224,196,.08); }
-.model-core .aether-mark { margin-bottom: 8px; }
+.model-core .hisab-mark { margin-bottom: 8px; }
 .model-core span { color: var(--mute); font-size: 7px; text-transform: uppercase; letter-spacing: .12em; }
 .model-core strong { font-family: var(--font-display), serif; font-size: 18px; font-weight: 500; }
 .model-node { position: absolute; z-index: 5; min-width: 86px; min-height: 30px; border: 1px solid var(--hairline); background: #111821; border-radius: 999px; display: flex; align-items: center; justify-content: center; gap: 7px; color: #A7B4C0; font-size: 8px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
@@ -521,7 +521,7 @@ main { min-height: 100vh; overflow: clip; }
   .nav-shell { width: calc(100% - 16px); height: 58px; border-radius: 14px; padding-left: 9px; }
   .wordmark { min-width: 0; }
   .wordmark > span:last-child { font-size: 13px; }
-  .aether-mark { width: 32px; height: 32px; }
+  .hisab-mark { width: 32px; height: 32px; }
   .hero { padding: 112px 0 34px; overflow: hidden; }
   .hero-layout { gap: 54px; }
   .hero-eyebrow { font-size: 7px; letter-spacing: .13em; margin-bottom: 19px; }

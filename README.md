@@ -1,6 +1,6 @@
-# AetherERP Marketing Site
+# Hisab ERP Marketing Site
 
-Premium, mobile-first enterprise ERP marketing experience for AetherERP.
+Premium, mobile-first enterprise ERP marketing experience for Hisab ERP.
 
 ## Stack
 - Next.js 15
@@ -13,7 +13,7 @@ Premium, mobile-first enterprise ERP marketing experience for AetherERP.
 - CSS/SVG live product dashboard and laptop scene
 
 ## Experience
-The site positions AetherERP as one operating system for finance, inventory, HR, CRM, manufacturing, procurement and analytics. It includes a cinematic live-dashboard hero, interactive module tour, unified data-model story, 90-day implementation flow, operating intelligence, security, composite case studies, pricing, integrations and a validated demo-request modal.
+The site positions Hisab ERP as one operating system for finance, inventory, HR, CRM, manufacturing, procurement and analytics. It includes a cinematic live-dashboard hero, interactive module tour, unified data-model story, 90-day implementation flow, operating intelligence, security, composite case studies, pricing, integrations and a validated demo-request modal.
 
 ## Run
 ```bash

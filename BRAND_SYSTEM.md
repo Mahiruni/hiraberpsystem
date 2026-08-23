@@ -1,4 +1,4 @@
-# AetherERP — Brand System
+# Hisab ERP — Brand System
 
 ## Brand board
 1. **Essence:** Quiet power. Industrial elegance. Absolute clarity.

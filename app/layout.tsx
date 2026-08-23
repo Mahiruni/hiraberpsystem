@@ -21,7 +21,7 @@ const body = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "AetherERP — One operating system for the entire company.",
+  title: "Hisab ERP — One operating system for the entire company.",
   description:
     "Finance, inventory, HR, CRM, manufacturing, procurement and analytics on one governed company model.",
   icons: { icon: "/icon.svg" },
