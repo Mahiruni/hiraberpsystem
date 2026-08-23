@@ -1,14 +1,19 @@
-# HisabERP Marketing Site
+# AetherERP Marketing Site
 
-Premium, mobile-first SaaS/fintech redesign for HisabERP.
+Premium, mobile-first enterprise ERP marketing experience for AetherERP.
 
 ## Stack
 - Next.js 15
 - React 19
+- TypeScript
 - Tailwind CSS
 - Framer Motion
 - Lucide icons
-- Pure canvas particle field
+- Pure canvas atmospheric particle field
+- CSS/SVG live product dashboard and laptop scene
+
+## Experience
+The site positions AetherERP as one operating system for finance, inventory, HR, CRM, manufacturing, procurement and analytics. It includes a cinematic live-dashboard hero, interactive module tour, unified data-model story, 90-day implementation flow, operating intelligence, security, composite case studies, pricing, integrations and a validated demo-request modal.
 
 ## Run
 ```bash
@@ -22,4 +27,4 @@ npm run build
 npm start
 ```
 
-The site is optimized for Vercel and uses no remote image or font dependency.
+The project is optimized for Vercel. Fonts are managed with `next/font`; the hero dashboard and motion system are rendered with React, CSS, SVG and canvas rather than video assets.
