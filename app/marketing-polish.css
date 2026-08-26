@@ -1,0 +1,322 @@
+/*
+ * Marketing experience polish
+ * Loaded after the core visual system so this file can focus on interaction,
+ * scroll stability, responsive rhythm and accessibility without duplicating
+ * the primary brand stylesheet.
+ */
+
+html {
+  scrollbar-gutter: stable;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  min-width: 320px;
+  overscroll-behavior-y: none;
+  touch-action: pan-y pinch-zoom;
+}
+
+main {
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+[id] {
+  scroll-margin-top: 92px;
+}
+
+/* Keep the fixed glass navigation on its own compositor layer. */
+.nav-wrap {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.nav-shell {
+  isolation: isolate;
+  transition-duration: 280ms;
+}
+
+.nav-main > a,
+.nav-products > button,
+.nav-login,
+.mobile-menu,
+.mobile-top button {
+  min-height: 40px;
+}
+
+.nav-main > a,
+.nav-products > button {
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-main > a:focus-visible,
+.nav-products > button:focus-visible,
+.nav-login:focus-visible {
+  border-radius: 9px;
+}
+
+.mega {
+  overscroll-behavior: contain;
+}
+
+.mobile-overlay,
+.modal-backdrop {
+  overscroll-behavior: contain;
+}
+
+.mobile-panel,
+.demo-modal {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* More consistent vertical rhythm across the long-form marketing page. */
+.section {
+  padding-block: clamp(92px, 9.5vw, 136px);
+}
+
+.section-intro {
+  margin-bottom: clamp(38px, 5vw, 56px);
+}
+
+.section-intro h2 {
+  max-width: 18ch;
+}
+
+.section-intro p {
+  max-width: 62ch;
+}
+
+/* Prevent expensive visual regions from invalidating unrelated page paint. */
+.hero-machine,
+.final-machine,
+.laptop-scene,
+.dashboard,
+.mega,
+.demo-modal {
+  contain: paint;
+}
+
+.hero-copy,
+.section-intro,
+.module-copy,
+.final-copy {
+  transform: translateZ(0);
+}
+
+/* Buttons feel deliberate instead of twitchy while the page is moving. */
+.button,
+.nav-main > a,
+.nav-products > button,
+.mega-grid a,
+.mobile-links a {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.button {
+  touch-action: manipulation;
+}
+
+.button:focus-visible,
+.mobile-menu:focus-visible,
+.mobile-top button:focus-visible {
+  outline-offset: 4px;
+}
+
+/* Stable content density: readable without oversized dead zones. */
+.hero-copy > p,
+.section-intro p {
+  text-wrap: pretty;
+}
+
+.hero-buttons {
+  row-gap: 10px;
+}
+
+.footer a,
+.mobile-panel a,
+.mega a {
+  text-underline-offset: 4px;
+}
+
+/* Coarse pointers do not benefit from magnetic/shimmer pointer effects. */
+@media (hover: none), (pointer: coarse) {
+  .magnetic > span {
+    transform: none !important;
+  }
+
+  .button::after {
+    display: none;
+  }
+
+  .button:hover,
+  .mega-grid a:hover,
+  .nav-main > a:hover,
+  .nav-products > button:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .section {
+    padding-block: 96px;
+  }
+
+  .section-intro {
+    margin-bottom: 42px;
+  }
+
+  .nav-shell {
+    width: min(100% - 24px, 1240px);
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    scroll-padding-top: 82px;
+  }
+
+  [id] {
+    scroll-margin-top: 82px;
+  }
+
+  .shell {
+    width: min(100% - 30px, 1240px);
+  }
+
+  .section {
+    padding-block: 78px;
+  }
+
+  .section-intro {
+    margin-bottom: 34px;
+  }
+
+  .section-intro h2 {
+    font-size: clamp(38px, 12vw, 54px);
+    line-height: .98;
+  }
+
+  .section-intro p,
+  .hero-copy > p {
+    font-size: 14px;
+    line-height: 1.72;
+  }
+
+  .nav-wrap,
+  .nav-wrap.dense {
+    top: 8px;
+  }
+
+  .nav-shell,
+  .nav-wrap.dense .nav-shell {
+    width: calc(100% - 16px);
+    height: 58px;
+    border-radius: 14px;
+    padding-inline: 10px;
+    background: rgba(9, 13, 18, .90);
+    backdrop-filter: blur(14px) saturate(115%);
+    -webkit-backdrop-filter: blur(14px) saturate(115%);
+  }
+
+  .mobile-panel {
+    width: min(92vw, 390px);
+    padding: 16px 18px 28px;
+  }
+
+  .mobile-links a,
+  .mobile-panel > a:not(.button) {
+    min-height: 52px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 116px;
+    padding-bottom: 68px;
+  }
+
+  .hero h1 {
+    font-size: clamp(50px, 15vw, 72px);
+    line-height: .92;
+  }
+
+  .hero-glow {
+    filter: blur(10px);
+    opacity: .72;
+  }
+
+  .grain {
+    opacity: .025;
+  }
+
+  .dust-field {
+    opacity: .62;
+  }
+
+  .button-large {
+    min-height: 50px;
+  }
+
+  .hero-buttons .button {
+    flex: 1 1 180px;
+  }
+
+  .demo-modal {
+    max-height: calc(100svh - 24px);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .section {
+    padding-block: 68px;
+  }
+
+  .shell {
+    width: calc(100% - 24px);
+  }
+
+  .hero {
+    padding-top: 104px;
+  }
+
+  .hero-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons .button,
+  .mobile-demo {
+    width: 100%;
+  }
+
+  .mobile-panel {
+    width: 100%;
+    border-left: 0;
+  }
+}
+
+/* Honor OS motion preferences throughout the experience. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+
+  .hero-glow,
+  .dust-field,
+  .fake-cursor {
+    display: none !important;
+  }
+}
