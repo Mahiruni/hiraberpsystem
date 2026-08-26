@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Sora } from "next/font/google";
 import "./globals.css";
 import "./mobile-polish.css";
+import "./marketing-polish.css";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
