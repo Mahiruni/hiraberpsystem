@@ -26,9 +26,11 @@ main {
   scroll-margin-top: 92px;
 }
 
-/* Keep the fixed glass navigation on its own compositor layer. */
+/*
+ * Do not transform .nav-wrap. A transformed ancestor becomes the containing
+ * block for fixed descendants and breaks the full-screen mobile navigation.
+ */
 .nav-wrap {
-  transform: translateZ(0);
   backface-visibility: hidden;
 }
 
@@ -70,6 +72,11 @@ main {
 .demo-modal {
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
+}
+
+/* Prevent the page behind an open mobile menu from drifting. */
+body:has(.mobile-overlay) {
+  overflow: hidden;
 }
 
 /* More consistent vertical rhythm across the long-form marketing page. */
@@ -172,6 +179,63 @@ main {
   .nav-shell {
     width: min(100% - 24px, 1240px);
   }
+
+  /* Explicit mobile navigation contract. */
+  .nav-main,
+  .nav-login,
+  .nav-demo {
+    display: none !important;
+  }
+
+  .nav-actions {
+    margin-left: auto;
+  }
+
+  .mobile-menu {
+    display: grid !important;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
+    touch-action: manipulation;
+  }
+
+  .mobile-overlay {
+    display: flex !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw;
+    height: 100dvh;
+    min-height: 100svh;
+    z-index: 1000;
+    align-items: stretch;
+    justify-content: flex-end;
+    pointer-events: auto;
+    background: rgba(2, 5, 8, .78);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+  }
+
+  .mobile-panel {
+    position: relative;
+    z-index: 1;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    background: rgba(12, 17, 23, .985);
+    box-shadow: -24px 0 70px rgba(0, 0, 0, .42);
+    pointer-events: auto;
+  }
+
+  .mobile-top button,
+  .mobile-panel a,
+  .mobile-panel button {
+    pointer-events: auto;
+    touch-action: manipulation;
+  }
 }
 
 @media (max-width: 720px) {
@@ -222,9 +286,13 @@ main {
     -webkit-backdrop-filter: blur(14px) saturate(115%);
   }
 
+  .nav-shell .wordmark {
+    min-width: 0;
+  }
+
   .mobile-panel {
     width: min(92vw, 390px);
-    padding: 16px 18px 28px;
+    padding: max(16px, env(safe-area-inset-top)) 18px max(28px, env(safe-area-inset-bottom));
   }
 
   .mobile-links a,
@@ -296,6 +364,7 @@ main {
   .mobile-panel {
     width: 100%;
     border-left: 0;
+    box-shadow: none;
   }
 }
 
